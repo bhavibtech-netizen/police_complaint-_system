@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Police AI Assist - Modern Complaint System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="app-background">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      <div class="glow-orb orb-3"></div>
+    </div>
+    
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo" onclick="window.navigateTo('home')">
+          <img src="/police-logo.svg" alt="AP Police Logo" class="nav-logo">
+          <span class="logo-text">Police<span class="text-accent">AI</span> Assist</span>
+        </div>
+        <div class="nav-actions">
+          <div class="language-selector">
+            <i class="ph ph-globe"></i>
+            <select id="lang-select" onchange="window.changeLanguage(this.value)">
+              <option value="en">English</option>
+              <option value="hi">हिंदी</option>
+              <option value="te">తెలుగు</option>
+            </select>
+          </div>
+          <div id="nav-auth-container" style="display: flex; gap: 8px;"></div>
+          <button class="btn btn-primary" onclick="window.navigateTo('chatbot')" style="display: flex; gap: 4px;">
+            <i class="ph-bold ph-chat-teardrop-dots"></i> 
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="app-content" class="container">
+      <!-- Dynamic Views Rendered Here -->
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
